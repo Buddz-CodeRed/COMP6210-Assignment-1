@@ -1,0 +1,278 @@
+:root {
+    box-sizing: border-box;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 100;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.navContainer nav{
+    top: 0;  
+    left: 0;
+    width: 100%;         
+    height: 65px;        
+    background-color: transparent; 
+    display: flex;
+    flex-direction: row ;   
+    justify-content: center; 
+    align-items: center;
+    gap: 15px;             
+    z-index: 100;
+}
+
+/* For Chrome, Safari, and Opera */
+.navContainer::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge, and Firefox */
+.navContainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.navItem {
+    width: 60px;           /* Adjust this to your sidebar's width */
+    height: 60px;  
+    display: flex;         
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto; 
+    background: transparent;
+}
+
+.navIcon {
+    width: 100% !important;  /* Forces it to fill the navItem */
+    height: 100% !important;
+    object-fit: contain;     /* Prevents stretching/distortion */
+    transition: all 0.2s ease-in-out; /* Smoothly animates the glow */
+    cursor: pointer;
+    filter: brightness(0.9); /* Slightly dimmed when inactive */
+}
+
+.homeIcon {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.navIcon:hover {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+    transform: scale(1.1); /* Makes it pop out slightly */
+}
+
+.homeIcon:hover {
+    filter: brightness(1.3) drop-shadow(0 0 15px rgba(255, 200, 100, 0.8)) !important;
+}
+
+.scp-detail-container {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.header_wrapper{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    clip-path: polygon(
+    /* --- Main Corners (Outer Boundary) --- */
+    100% 0%,     /* Start: Top-Right */
+    100% 100%,   /* Bottom-Right */
+    0% 100%,     /* Bottom-Left */
+    0% 0%,       /* Top-Left */
+    
+    /* --- The "Tab" Cut-in (Now on the Top-Right) --- */
+    40% 0%,      /* Start of cut-in (mirrored 60%) */
+    45% 20px,    /* Top-left of the "tab" (mirrored 55%) */
+    100% 20px,   /* Top-right of the "tab" (mirrored 0%) */
+    100% 0%      /* Back to start */
+);
+
+    display: flex;
+    flex-grow: 0 0 auto;
+    flex-direction: column;
+    padding: 25px 25px 15px 35px;
+    gap: 5px;
+	background: linear-gradient(45deg, darkred 30%, crimson); 
+}
+
+.header_wrapper::before {
+    content:"";
+    position: absolute;
+    inset: 5px; /* Border thickness */
+    background: #2a2a2a; /* Backdrop color */    
+    clip-path: polygon(
+    /* --- Top-Left Notch (Mirrored) --- */
+    0% 0%,        /* Start: Absolute top-left */
+    60% 0%,       /* Move right along top edge */
+    55% 10px,     /* Dip down/left to create slope */
+    0% 10px,      /* Go back to left edge */
+
+    /* --- Left Wall --- */
+    0% 100%,      /* Drop straight to bottom-left corner */
+
+    /* --- Bottom-Right Notch (Mirrored) --- */
+    30% 100%,              /* Move right along bottom edge */
+    35% calc(100% - 10px), /* Dip up/right to create slope */
+    100% calc(100% - 10px),/* Go to far right edge */
+
+    /* --- Right Wall --- */
+    100% 0%       /* Go up to top-right corner to close the shape */
+);
+    z-index: -1;
+    transform: translate(4px, 4px); /* Offset the shadow */
+}
+
+.header_wrapper > .file_heading{
+    position: absolute;
+    color: #2a2a2a;
+    border-left: transparent;
+    left: 3%;
+    top: -3%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.stamp_logo > .logo{
+    position: absolute;
+    bottom: 14.5%;
+    right: 10%;
+    width: 70px;
+    height: auto;
+    background: linear-gradient(45deg, darkred 30%, rgb(199, 17, 53));    
+    border-radius: 100%;
+}
+
+.header_wrapper h3 {
+    position: relative;
+    font-size: 0.75rem;
+    margin: 0px;
+    color: #f3c14d;
+    text-transform: uppercase;
+}
+
+.header_wrapper h2 {
+    font-size: 1.1rem;
+    margin: 0px;
+}
+
+.header_wrapper > h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #f3c14d;
+    text-transform: uppercase;
+}
+
+.header_items h2{
+    display: flex;
+    padding-left: auto;
+    border-left: 0;
+}
+
+.header_items h3{
+    display: flex;
+    align-items: center;
+}
+
+.sec_1, .sec_2{
+    display: flex;
+    flex-direction: row;
+    flex-grow: auto;
+}
+
+.scpImage {
+    width: 100%;
+    height: auto;
+    max-width:  100%;
+    max-height: 50vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    background: linear-gradient(45deg, darkred 30%, crimson);
+    clip-path: polygon(
+    /* --- Top-Right Notch --- */
+    100% 0%,      /* Start: Absolute top-right */
+    40% 0%,       /* Move left along top edge (mirrored 60%) */
+    45% 10px,     /* Dip down/right to create slope (mirrored 55%) */
+    100% 10px,    /* Go back to right edge */
+
+    /* --- Right Wall --- */
+    100% 100%,    /* Drop straight to bottom-right corner */
+
+    /* --- Bottom-Left Notch --- */
+    70% 100%,              /* Move left along bottom edge (mirrored 30%) */
+    65% calc(100% - 10px), /* Dip up/right to create slope (mirrored 35%) */
+    0% calc(100% - 10px),  /* Go to far left edge */
+
+    /* --- Left Wall --- */
+    0% 0%         /* Go up to top-left corner to close the shape */
+);
+
+}
+
+.shadow_wrapper{
+    filter: drop-shadow(0 0 5px rgba(220, 20, 60, 0.5));    
+}
+
+.glass_morph > .desc{
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);           
+    -webkit-backdrop-filter: blur(12px);   
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    clip-path: polygon(
+    /* --- Top-Right Notch --- */
+    100% 0%,      /* Start: Top-Right corner */
+    60% 0%,       /* Move left along top edge (using your 30% logic) */
+    65% 10px,     /* Dip down/right to create slope */
+    100% 10px,    /* Go back to right edge */
+
+    /* --- Right Wall --- */
+    100% 100%,    /* Drop straight to bottom-right corner */
+
+    /* --- Bottom-Left Notch --- */
+    0% 100%,              /* Start: Bottom-Left corner */
+    60% 100%,             /* Move right along bottom edge (using your 60% logic) */
+    55% calc(100% - 10px),/* Dip up/left to create slope */
+    0% calc(100% - 10px), /* Go back to left edge */
+
+    /* --- Left Wall --- */
+    0% 0%         /* Go back up to top-left to close the shape */
+);
+
+
+}
+
+h2 {
+    font-size: 1.2rem;
+    border-left: 3px solid #f3c14d;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0px 10px 25px 10px;
+    color: #ccc;
+    word-wrap: break-word; /* Prevents long words from breaking layout */
+}
+
+
+

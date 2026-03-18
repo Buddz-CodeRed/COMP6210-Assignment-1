@@ -1,0 +1,36 @@
+import { Link } from 'react-router'
+import { scp_items } from './Data'
+
+export default function Nav()
+{
+    
+    return(
+        <div className='navContainer'>
+            <nav>
+                {/* Create link for Home */}
+                <div className='navItem'>
+                    
+                    <Link to='/Home'>
+                        <img src="/images/home_icon-Photoroom.png" alt="Home Icon" className='navIcon homeIcon'></img>
+                    </Link>
+                </div>
+                {   // Use the map method to iterate through the scp_items array with the key 'subject' to render a link for each object
+                    scp_items.map(
+                        // The 'object' variable will represent each individual item currently being processed in the loop e.g. iteration 1: { "subject": "SCP-173", "class": "Euclid", "description": "Statue...", "containment": "Locked container..." }...
+                        objects => (
+                            // set a unique key 'subject':string for this element block
+                            <div key={objects.subject} className='navItem'>
+                                {/* set each string value of subject as a url link */}
+                                <Link to={`/objects/${objects.subject}`}>
+                                    <img src={objects.icon} alt='icon' className='navIcon'></img>
+                                </Link>
+                            </div>
+                        )
+                    )
+                }
+            </nav>
+        </div>
+    )
+}
+
+
