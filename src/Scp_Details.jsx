@@ -15,7 +15,7 @@ export default function scp_Details()
                 <h2 className='file_heading'>SCP Foundation</h2>
 
                 <div className='stamp_logo'>
-                    <img src="/public/images/stamp-Photoroom.png" alt="Scp Logo" className='logo'/>
+                    <img src="/images/stamp-Photoroom.png" alt="Scp Logo" className='logo'/>
                 </div>
 
                 {/* access a specific property of the current array and display it */}
