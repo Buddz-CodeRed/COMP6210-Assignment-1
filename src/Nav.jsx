@@ -1,9 +1,23 @@
 import { Link } from 'react-router'
 import { scp_items } from './Data'
 
-export default function Nav()
+export const SCPIconList = ({itemClass, iconClass = "navIcon"}) => {
+    return (
+        <>
+            {scp_items.map(objects => (
+                <div key={objects.subject} className={itemClass}>
+                    <Link to={`/objects/${objects.subject}`}>
+                        {/* Now uses the passed prop OR the default global class */}
+                        <img src={objects.icon} alt="Subject Icon" className={iconClass} />
+                    </Link>
+                </div>
+            ))}
+        </>
+    );
+};
+
+export default function Nav() 
 {
-    
     return(
         <div className='navContainer'>
             <nav>
@@ -23,6 +37,7 @@ export default function Nav()
                                 {/* set each string value of subject as a url link */}
                                 <Link to={`/objects/${objects.subject}`}>
                                     <img src={objects.icon} alt='icon' className='navIcon'></img>
+                                    {/* <span>{objects.subject}</span> */}
                                 </Link>
                             </div>
                         )
@@ -32,5 +47,3 @@ export default function Nav()
         </div>
     )
 }
-
-

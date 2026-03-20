@@ -13,16 +13,19 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overscroll-behavior-x: none;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden; /* Prevents horizontal swiping/scrolling */
-    position: fixed; 
+    /* width: 100%;
+    min-height: 100vh; */
 }
 
-.navContainer nav {
-    position: absolut;   /* This lets it float over the background */
+html{
+    margin: 5px;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* This removes the black scrollbar gutter */
+}
+
+.navContainer nav{
+    position: relative;   /* This lets it float over the background */
     top: 0;
     left: 0;              /* Ensure it starts at the very left */
     width: 100%;         
@@ -33,7 +36,7 @@
     justify-content: space-evenly; 
     align-items: center;
     gap: 10px;             
-    z-index: 100;         /* Keeps it on top of the image */
+    z-index: 9999 !important;         /* Keeps it on top of the image */
 }
 
 
@@ -60,12 +63,12 @@
 }
 
 .navIcon {
-    width: 100% !important;  /* Forces it to fill the navItem */
-    height: 100% !important;
-    object-fit: contain;     /* Prevents stretching/distortion */
-    transition: all 0.2s ease-in-out; /* Smoothly animates the glow */
+    width: 40px; 
+    height: 40px;
+    object-fit: contain;  
+    transition: all 0.2s ease-in-out; 
     cursor: pointer;
-    filter: brightness(0.9); /* Slightly dimmed when inactive */
+    filter: brightness(0.9); 
 }
 
 .homeIcon {
@@ -82,14 +85,19 @@
     filter: brightness(1.3) drop-shadow(0 0 15px rgba(255, 200, 100, 0.8)) !important;
 }
 
-.scp-detail-container {
+/* .scp-detail-container {
     width: 100%;
     max-width: 100vw;
     padding: 15px;
+    margin: 15px;
     box-sizing: border-box;
     overflow-x: hidden;
-}
+} */
 
+.shadow_wrapper{
+    margin-top: 10px;
+    margin: 20px;
+}
 .header_wrapper{
     position: relative;
     margin-left: auto;

@@ -10,11 +10,13 @@ export default function App()
       {/* monitors the URL bar for changes to the address */}
       <Router>
         {/* call the Nav component */}
-        <Nav />
+        <Nav/>
         {/* render the current URL and displays the component */}
         <Routes>
           {/* if the URL path ends with the path=string, render it */}
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          
+          <Route path="/Home" element={<Home />}/>
           {/* if the URL path ends with path=string, render the Scp_Details component with 
           the appropriate object. (:subject = wildcard) */}
           <Route path={"/objects/:subject"} element={<Scp_Details />}/>

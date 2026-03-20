@@ -1,7 +1,7 @@
 import { scp_items } from './Data'
 import { useParams } from 'react-router';
 
-export default function scp_Details()
+export default function Scp_Details()
 {
     // instanciate the last string extracted in the URL when clicked on [useParam = URL Reader]
     const {subject} = useParams();
