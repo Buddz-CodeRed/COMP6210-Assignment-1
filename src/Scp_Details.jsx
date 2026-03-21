@@ -17,7 +17,6 @@ export default function Scp_Details()
                 <div className='stamp_logo'>
                     <img src="/images/stamp-Photoroom.png" alt="Scp Logo" className='logo'/>
                 </div>
-
                 {/* access a specific property of the current array and display it */}
                 <div className='header_items'>
                     <div className='sec_1'>
@@ -27,10 +26,9 @@ export default function Scp_Details()
                     <div className='sec_2'>
                         <h3>Class</h3>
                         <h2>{currentObject.class}</h2>
-                    </div>
-                    
+                    </div>                    
                 </div>
-                
+                <img src={currentObject.icon} alt="Icon" className='currentObjectIcon'/>                
             </div>
             <img src={currentObject.image} alt="SCP Image" className="scpImage"/>
 
@@ -54,8 +52,8 @@ export default function Scp_Details()
                             <p key={i}>{procedure}</p>
                         ))
                     )}
-                    </div>
                 </div>
             </div>
+        </div>
     )
 }
