@@ -9,3 +9,13 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+window.addEventListener('orientationchange', () => {
+  // Briefly disabling user scaling forces the browser to reset the zoom level
+  const viewport = document.querySelector('meta[name="viewport"]');
+  if (viewport) {
+    viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0';
+    setTimeout(() => {
+      viewport.content = 'width=device-width, initial-scale=1.0';
+    }, 300);
+  }
+});

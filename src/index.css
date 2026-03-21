@@ -17,7 +17,7 @@
 html{
     margin: 5px;
     padding: 0;
-    width: 100%;
+    max-width: 100vw;
     overflow-x: hidden; /* This removes the black scrollbar gutter */
 }
 
