@@ -31,8 +31,9 @@ export default function Scp_Details()
                 {/* <img src={currentObject.icon} alt="Icon" className='currentObjectIcon'/>                 */}
             </div>
             <img src={currentObject.icon} alt="Icon" className='currentObjectIcon'/>
-            <img src={currentObject.image} alt="SCP Image" className="scpImage"/>
-
+            <div className="image_container">
+                <img src={currentObject.image} alt="SCP Image" className="scpImage"/>
+            </div>
             <div className='glass_morph'>
                 <div className='desc'>
                     <h2>Description</h2>

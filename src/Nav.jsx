@@ -7,8 +7,7 @@ export const SCPIconList = ({itemClass, iconClass = "navIcon"}) => {
             {scp_items.map(objects => (
                 <div key={objects.subject} className={itemClass}>
                     <Link to={`/objects/${objects.subject}`}>
-                        {/* Now uses the passed prop OR the default global class */}
-                        <img src={objects.icon} alt="Subject Icon" className={iconClass} />
+                        <img src={objects.icon} alt="Subject Icon" className={iconClass} />              
                     </Link>
                 </div>
             ))}
@@ -37,8 +36,10 @@ export default function Nav()
                                 {/* set each string value of subject as a url link */}
                                 <Link to={`/objects/${objects.subject}`}>
                                     <img src={objects.icon} alt='icon' className='navIcon'></img>
-                                    {/* <span>{objects.subject}</span> */}
                                 </Link>
+                                <div className="hover_container">
+                                    <span className="hover-id">{objects.subject}</span>
+                                </div>
                             </div>
                         )
                     )
