@@ -86,7 +86,7 @@ html{
 .shadow_wrapper{
     margin-top: 10px;
     margin: 20px;
-    filter: drop-shadow(0 0 5px rgba(220, 20, 60, 0.5)); 
+    filter: drop-shadow(0 0 10px rgba(220, 20, 60, 0.5)); 
 }
 
 .header_wrapper{
@@ -100,7 +100,7 @@ html{
     padding: 25px 25px 15px 35px;
     gap: 5px;
 	background: linear-gradient(45deg, darkred 30%, crimson); 
-    clip-path: polygon(
+    clip-path: polygon( /* ai helped generate syntax for me to edit */
     /* --- Main Corners (Outer Boundary) --- */
     100% 0%,     /* Start: Top-Right */
     100% 100%,   /* Bottom-Right */
@@ -121,7 +121,7 @@ html{
     inset: 5px;
     background: #2a2a2a;  
     z-index: -1;
-    transform: translate(4px, 4px); /* Offset the shadow */
+    transform: translate(4px, 4px);
     clip-path: polygon(
     0% 0%,        /* Start: Absolute top-left */
     60% 0%,       /* Move right along top edge */
@@ -264,14 +264,18 @@ p {
         width: auto;
         min-height: 100dvh;
         overflow: hidden;
-        padding: 0px;
+        padding: 20px;
         box-sizing: border-box;
+    }
+
+    .navItem {
+        padding: 20px 0 20px;
     }
 
     .navIcon {
     width: 60px; 
     height: 60px;
-    padding-top: 30px;
+    padding: 30px;
     object-fit: contain;  
     transition: all 0.2s ease-in-out; 
     cursor: pointer;
@@ -310,28 +314,29 @@ p {
     inset: 5px;
     background: #2a2a2a;
     z-index: -1;
-    transform: translate(4px, 1px);
+    transform: translate(4px, 4px);
 }
 
-.header_items {
-    padding-top: 10px;
+    .header_items {
+        padding-top: 10px;
 }
 
-.header_items  h3 {
-    font-size: 1.1rem;
+    .header_items  h3 {
+        font-size: 1.1rem;
 }
 
-.header_items h2 {
-    font-size: 1.2rem;
+    .header_items h2 {
+        font-size: 1.2rem;
 }
 
     .currentObjectIcon {
         display: block;
         position: relative;
-        left: 85.56px;
+        left: 4rem;
         top: 20px;
         width: 23.5vw;
         height: auto;
+        margin-bottom: 30px;
     }
 
     .stamp_logo > .logo {
@@ -339,23 +344,27 @@ p {
     }
 
     .glass_morph > .desc {
+        
         position: absolute;
         top: 0px;
-        right: 0px;
-        width: 27rem;
+        right: 20px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-bottom: auto;
+        width: 25rem;
         height: 19rem;
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(12px);           
         -webkit-backdrop-filter: blur(12px);   
         border: 1px solid rgba(255, 255, 255, 0.1);
         box-sizing: border-box;
-        
     }
 
     .scpImage {
         position: relative;
         top: 10px;
         max-width: 100%;
+        max-height: 50vh;
         height: auto;
         margin-top: 20px;
         clip-path: polygon(
