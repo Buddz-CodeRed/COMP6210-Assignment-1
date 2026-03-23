@@ -8,8 +8,8 @@ export const scp_items = [
             "procedure_2": "Teams including a minimum of two (2) members are required within 20 meters of SCP-002 or its containment area. Personnel should maintain physical contact with one another at all times to confirm there is another person present, as perception may be dulled, skewed, or influenced by proximity to the object.",
             "procedure_3": "No personnel below Level 3 are permitted within SCP-002. This requirement may be waived via written authorization from two (2) off-site Level 4 administrators. Command staff issued such a waiver must be escorted by at least five (5) Level 3 Security personnel for the duration of their contact and must temporarily surrender their rank and security clearance. Following contact, command staff will be escorted at least 5 km from SCP-002 to undergo a seventy-two (72)-hour quarantine and psychological evaluation. If deemed fit for return to duty by psych staff, rank and security clearance may be restored when quarantine expires."
         },
-        "image": "/src/assets/images/800px-SCP002.jpg",
-        "icon": "/src/assets/images/scp-002_icon-Photoroom.png"
+        "image": "./src/assets/images/800px-SCP002.jpg",
+        "icon": "./src/assets/images/scp-002_icon-Photoroom.png"
     },
     {
         "subject": "SCP-003",
@@ -21,8 +21,8 @@ export const scp_items = [
             "procedure_3": "Personnel who enter SCP-003's containment area must first be examined for body parasites of Category IV or higher complexity, and sterilized if such organisms are present. All personnel who have come in physical contact with SCP-003-1 are to immediately report for sterilization afterwards.",
             "procedure_4": "SCP-003-1 must not be removed from SCP-003-2 except in case of emergency procedures detailed above. Any significant change in SCP-003-2's rune activity (including pattern, frequency, or color) should be reported within three (3) hours of occurrence. Cessation of rune activity must be reported immediately. SCP-003-2 must be supplied with power via the source designated Generator 003-IX at all times."
         },
-        "image": "/src/assets/images/scp-003.jpg",
-        "icon": "/src/assets/images/scp-003_icon-Photoroom.png"
+        "image": "./src/assets/images/scp-003.jpg",
+        "icon": "./src/assets/images/scp-003_icon-Photoroom.png"
     },
     {
         "subject": "SCP-004",
@@ -32,16 +32,16 @@ export const scp_items = [
             "procedure_1": "When handling items SCP-004-2 through SCP-004-13, proper procedure is vital. The items are not permitted to be moved off-site unless accompanied by two Level 4 security personnel. Under no circumstances should any other component of SCP-004 be taken through SCP-004-1. The effects of doing so are as yet unknown, and the current cost of experimentation makes further research impractical. Should any of the objects contained within SCP-004-1 breach containment, or the facility be breached, the keys must be brought inside and the door closed prior to activation of Site 62’s on-site warhead. Unauthorized removal of keys from the testing area is grounds for immediate termination.",
             "procedure_2": "Level 1 clearance is required for basic access to SCP-004-1; Level 4 clearance is required for use of SCP-004-2 to -13."
         },
-        "image": "/src/assets/images/scp_004_ai.png",
-        "icon": "/src/assets/images/scp-004_icon-Photoroom.png"
+        "image": "./src/assets/images/scp_004_ai.png",
+        "icon": "./src/assets/images/scp-004_icon-Photoroom.png"
     },
     {
         "subject": "SCP-005",
         "class": "Safe",
         "description": "In appearance, SCP-005 resembles an ornate key, displaying the characteristics of a typical mass produced key used in the 1920s. The key was discovered when a civilian used it to infiltrate a high security facility. SCP-005 seems to have the unique ability to open any and all forms of lock (See Appendix A), be they mechanical or digital, with relative ease. The origin of this ability has yet to be determined.",
         "containment": "SCP-005 poses no immediate risk in any direct sense. Even so, its unique functions require special measures be taken to restrict access and manipulation of the object. Approval of at least one (1) Level 4 personnel is required for the removal of the object from its containment area.",
-        "image": "/src/assets/images/scp_005_render.png",
-        "icon": "/src/assets/images/scp-005_icon-Photoroom.png"
+        "image": "./src/assets/images/scp_005_render.png",
+        "icon": "./src/assets/images/scp-005_icon-Photoroom.png"
     },
     {
         "subject": "SCP-006",
@@ -53,7 +53,7 @@ export const scp_items = [
             "procedure_3": "Any procedure in which liquid is acquired from SCP-006 must be approved by three (3) O5 level personnel. The liquid is to be transferred in a Quad-Sealant Container and under armed guard.",
             "procedure_4": "If at any time personnel come into contact with SCP-006 or liquid from SCP-006, they are to be confined and terminated after sufficient studies are done. Due to the nature of SCP-006, the most effective termination method is incineration. (For full report, see file SCP006-TerO5)",
             },
-        "image": "/src/assets/images/SCP-006.png",
-        "icon": "/src/assets/images/scp-006_icon-Photoroom.png"
+        "image": "./src/assets/images/SCP-006.png",
+        "icon": "./src/assets/images/scp-006_icon-Photoroom.png"
     }
 ]

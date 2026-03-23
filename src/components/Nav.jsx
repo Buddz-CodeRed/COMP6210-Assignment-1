@@ -24,7 +24,7 @@ export default function Nav()
                 <div className='navItem'>
                     <div className="hover_container">
                         <Link to='/Home'>
-                            <img src="/src/assets/images/home_icon-Photoroom.png" alt="Home Icon" className='navIcon homeIcon'></img>
+                            <img src="./src/assets/images/home_icon-Photoroom.png" alt="Home Icon" className='navIcon homeIcon'></img>
                         </Link>
                         <span className='hover-id'>Home</span>
                     </div>
