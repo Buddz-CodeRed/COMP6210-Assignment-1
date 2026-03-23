@@ -1,7 +1,8 @@
 @font-face {
     font-family: 'Google spies';
     src: url('../src/assets/fonts/Google-spies.woff2') format('woff2'),
-        url('../src/assets/fonts/Google-spies.woff') format('woff');
+        url('../src/assets/fonts/Google-spies.woff') format('woff'),
+        url('../src/assets/fonts/Google-spies-rAB9.ttf') format('truetype');
     font-weight:bold;
     font-style: normal;
     font-display: swap;
