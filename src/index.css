@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'Google spies';
-    src: url('../src/assets/fonts/Google-spies.woff2') format('woff2'),
-        url('../src/assets/fonts/Google-spies.woff') format('woff');
+    src: url('./assets/fonts/Google-spies.woff2') format('woff2'),
+        url('./assets/fonts/Google-spies.woff') format('woff');
     font-weight:bold;
     font-style: normal;
     font-display: swap;
@@ -323,7 +323,7 @@ p {
 
 /* Tablet portrait */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) 
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) 
 {
     
     html {
