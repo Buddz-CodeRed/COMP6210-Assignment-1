@@ -1,13 +1,10 @@
-import styles from './Home.module.css';
-
 export default function Home() {
     return (
         <>
-            <div className={styles.fixedBg}></div>
+            <div className='fixedBg'></div>
             
-            <h1 className={styles.title}><b>SCP Foundation</b></h1>
-            <h3 className={styles.subTitle}><b>SECURE CONTAIN PROTECT</b></h3>
-  
+            <h1 className='title'><b>SCP Foundation</b></h1>
+            <h3 className='subTitle'><b>SECURE CONTAIN PROTECT</b></h3>
         </>
     );
 }
