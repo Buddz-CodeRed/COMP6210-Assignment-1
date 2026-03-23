@@ -2,7 +2,7 @@
     box-sizing: border-box;
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
-    font-weight: 100;
+    font-weight: 400;
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
     background-color: #242424;
@@ -78,7 +78,7 @@ html{
 }
 
 .homeIcon:hover {
-    filter: brightness(1.3) drop-shadow(0 0 15px rgba(255, 200, 100, 0.8)) !important;
+    filter: brightness(1.3) drop-shadow(0 0 15px rgba(255, 200, 100, 0.8))
 }
 
 .hover-id{
@@ -115,7 +115,7 @@ html{
     margin-right: auto;
     width: auto;
     display: flex;
-    flex-grow: 0 0 auto;
+    flex: 0 0 auto;
     flex-direction: column;
     padding: 25px 25px 15px 35px;
     gap: 5px;
@@ -160,7 +160,7 @@ html{
     color: #2a2a2a;
     border-left: transparent;
     left: 3%;
-    top: -3%;
+    top: -1%;
     margin: 0px;
     padding: 0px;
 }
@@ -192,17 +192,10 @@ html{
     margin: 0px;
 }
 
-.header_wrapper > h3 {
-    font-size: 1rem;
-    margin: 0;
-    color: #f3c14d;
-    text-transform: uppercase;
-}
-
 .header_items h2{
     display: flex;
-    padding-left: auto;
-    border-left: 0;
+    padding-left: 10px;
+    border-left: 2px;
 }
 
 .header_items h3{
@@ -213,20 +206,16 @@ html{
 .sec_1, .sec_2{
     display: flex;
     flex-direction: row;
-    flex-grow: auto;
+    flex-grow: 1;    
 }
 
 .scpImage {
     width: 100%;
     height: auto;
-    max-width:  100%;
+    max-width: 100%;
     max-height: 50vh;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     object-fit: cover;
+    display: block;
     background: linear-gradient(45deg, darkred 30%, crimson);
     clip-path: polygon(
     100% 0%,      /* Start: Absolute top-right */
@@ -234,16 +223,14 @@ html{
     45% 10px,     /* Dip down/right to create slope (mirrored 55%) */
     100% 10px,    /* Go back to right edge */
     100% 100%,    /* Drop straight to bottom-right corner */
-    70% 100%,              /* Move left along bottom edge (mirrored 30%) */
-    65% calc(100% - 10px), /* Dip up/right to create slope (mirrored 35%) */
+    38% 100%,              /* Move left along bottom edge (mirrored 30%) */
+    33% calc(100% - 10px), /* Dip up/right to create slope (mirrored 35%) */
     0% calc(100% - 10px),  /* Go to far left edge */
     0% 0%         /* Go up to top-left corner to close the shape */
     );
 }
 
-.glass_morph > .desc{
-    display: flex;
-    flex-direction: column;
+.glass_morph > .desc {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);           
     -webkit-backdrop-filter: blur(12px);   
@@ -255,11 +242,13 @@ html{
     100% 10px,    /* Go back to right edge */
     100% 100%,    /* Drop straight to bottom-right corner */
     0% 100%,              /* Start: Bottom-Left corner */
-    60% 100%,             /* Move right along bottom edge (using your 60% logic) */
-    55% calc(100% - 10px),/* Dip up/left to create slope */
+    52% 100%,             /* Move right along bottom edge (using your 60% logic) */
+    47% calc(100% - 10px),/* Dip up/left to create slope */
     0% calc(100% - 10px), /* Go back to left edge */
     0% 0%         /* Go back up to top-left to close the shape */
     );
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -276,211 +265,310 @@ p {
     color: #ccc;
     word-wrap: break-word; 
 }
-    /* --------------------------Tablet Version Vertical--------------------------------- */
 
-@media screen and (min-width: 768px) {
-    .shadow_wrapper {
-        display: block;
-        position: relative;
-        width: auto;
-        min-height: 100dvh;
-        overflow: hidden;
-        padding: 20px;
-        box-sizing: border-box;
+/* Tablet portrait */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) 
+{
+    
+    html {
+        margin: 8px;
     }
 
-    .navItem {
-        padding: 20px 0 20px;
+    /* --- Nav --- */
+    .navContainer nav {
+        height: 75px;
+        padding: 0px;
+        gap: 20px;
+        justify-content: center;
     }
 
+    .navitem {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* set icon size */
     .navIcon {
-    width: 60px; 
-    height: 60px;
-    padding: 30px;
-    object-fit: contain;  
-    transition: all 0.2s ease-in-out; 
-    cursor: pointer;
-    filter: brightness(0.9); 
-}
-
-    .hover-id{
-        display: none;
-        background-color: black;
-        color: white;
-        padding: 5px;
-        border-radius: 5px;
-        position: absolute;
-        z-index: 9999;
+        width: 50px;
+        height: 50px;
     }
 
-    .hover_container:hover .hover-id {
-        display: inline;
+    /* shadow wrapper (body)*/
+    .shadow_wrapper {
+        margin: 28px 40px;
     }
 
-    .hover_container {
-        position: relative;
-        transition: display 0.3s ease-in-out;
+    .header_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
     }
 
-    .file_heading {
-        display: none;
-}
+    /* current object icon */
+    .header_container > .currentObjectIcon {
+        display: block !important;
+        width: 10rem; /* set with and height of subject icon */
+        height: 9rem;
+        object-fit: contain;
+        margin: 0 auto;
+    }
 
-    .header_wrapper{
-        width: 33%;
-        height: auto;
-        position: relative;
-        top: 0px;
+    /* header */
+    .header_wrapper {
+        width: 30rem; /* width control for header section */
+        padding: 30px 0px 20px 45px; /* TRBL */
+        gap: 8px;
+        flex-shrink: 0;
         margin: 0;
-        padding-top: 15px;
-        clip-path: polygon(
-        0% 0%,                 /* Start: Top-Left */
-        60% 0%,                /* Move right along top */
-        55% 10px,              /* Dip down (Top Notch start) */
-        10px 10px,             /* NEW: Move to the left notch "corner" */
-        10px 40%,              /* Drop down the "inset" wall to 40% height */
-        0% 45%,                /* Cut OUTWARD to the absolute left edge */
-        0% 100%,               /* Drop to Bottom-Left corner */
-        30% 100%,              /* Move right along bottom */
-        35% calc(100% - 0px), /* Dip up (Bottom Notch start) */
-        100% calc(100% - 0px),/* Go to far right wall */
-        100% 0%                /* Straight up to Top-Right to close */
-    );   
-}
-
-    .header_wrapper::before {
-    content: "";
-    position: absolute;
-    inset: 5px;
-    background: #2a2a2a;
-    z-index: -1;
-    transform: translate(4px, 4px);
-}
-
-    .header_items {
-        padding-top: 10px;
-}
-
-    .header_items  h3 {
-        font-size: 1.1rem;
-}
-
-    .header_items h2 {
-        font-size: 1.2rem;
-}
-
-    .currentObjectIcon {
-        display: block;
-        position: relative;
-        left: 4rem;
-        top: 20px;
-        width: 23.5vw;
-        height: auto;
-        margin-bottom: 30px;
     }
 
-    .stamp_logo > .logo {
+    .header_wrapper > .file_heading {
+        margin: -4.5px;
+    }
+
+    .header_wrapper > .stamp_logo {
         display: none;
     }
 
-    .glass_morph > .desc {
-        
-        position: absolute;
-        top: 0px;
-        right: 20px;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-bottom: auto;
-        width: 25rem;
-        /* min-width: 35rem; */
-        height: auto;
-        min-height: 15rem;
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(12px);           
-        -webkit-backdrop-filter: blur(12px);   
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-sizing: border-box;
+    .header_wrapper h2 {
+        font-size: 1.35rem;
     }
 
-    .image_container{
-        width: 100%;
-        height: 40vh;
-        overflow: hidden;
+    .header_wrapper h3 {
+        font-size: 0.85rem;
+        text-align: right;
     }
 
+    .sec_1,
+    .sec_2 {
+        gap: 20px;
+        text-align: right;
+    }
+
+    /* image */
     .scpImage {
-        position: relative;
-        top: 10px;
+    max-height: 38svh;
+    object-position: center 20%;
+    }
+
+    /* glass card */
+    .glass_morph > .desc {
+        margin-top: 28px;
+        margin-bottom: 28px;
+        padding: 10px 10px;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+        padding-left: 14px;
+        margin-left: 14px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0px 14px 28px 14px;
+    }
+}
+
+/* Tablet Landscape */
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
+
+    html {
+        margin: 10px;
+    }
+
+    /* Nav */
+    .navContainer nav {
+        height: 80px;
+        padding-top: 20px;
+        gap: 30px;
+        justify-content: center;
+    }
+    /* set icon parent */
+    .navItem {
+        width: 80px;
+        height: 80px;
+    }
+    /* set icon size */
+    .navIcon {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* shadow wrapper (body)*/
+    .shadow_wrapper {
+        margin: 32px 60px;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* header */
+    .header_wrapper {
+        width: 30rem; /* width control for header section */
+        padding: 30px 0px 20px 45px; /* TRBL */
+        gap: 8px;
+        flex-shrink: 0;
+        margin: 0;
+    }
+
+    .header_wrapper h2 {
+        font-size: 1.5rem;
+    }
+
+    .header_wrapper h3 {
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+    }
+
+    .header_wrapper > .file_heading {
+        margin: -7px;
+    }
+
+    .header_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        margin-top: 20px;
-        clip-path: polygon(
-        100% 0%,      /* Start: Absolute top-right */
-        70% 0%,       /* Move left along top edge (mirrored 60%) */
-        73% 10px,     /* Dip down/right to create slope (mirrored 55%) */
-        100% 10px,    /* Go back to right edge */
-        100% 100%,    /* Drop straight to bottom-right corner */
-        70% 100%,              /* Move left along bottom edge (mirrored 30%) */
-        65% calc(100% - 10px), /* Dip up/right to create slope (mirrored 35%) */
-        0% calc(100% - 10px),  /* Go to far left edge */
-        0% 0%         /* Go up to top-left corner to close the shape */
-        );
+    }
+
+    /* current object icon */
+    .header_container > .currentObjectIcon {
+        display: block !important;
+        width: 10rem; /* set with and height of subject icon */
+        height: 9rem;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .header_wrapper > .stamp_logo {
+        display: none;
+    }
+
+    /* image */
+    .scpImage {
+        max-height: 100svh;
+        object-position: center 15%;;
     }
 
     h2 {
         font-size: 1.5rem;
+        border-left-width: 4px;
+        padding-left: 16px;
+        margin-left: 16px;
+    }
+
+    p {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        margin: 0px 16px 32px 16px;
+    }
+
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1280px) {
+    
+    html {
+        margin: 10px;
+    }
+
+    /* Nav */
+    .navContainer nav {
+        height: 80px;
+        padding-top: 20px;
+        gap: 30px;
+        justify-content: center;
+    }
+    /* set icon parent */
+    .navItem {
+        width: 80px;
+        height: 80px;
+    }
+    /* set icon size */
+    .navIcon {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* shadow wrapper (body)*/
+    .shadow_wrapper {
+        margin: 32px 60px;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* header */
+    .header_wrapper {
+        width: 30rem; /* width control for header section */
+        padding: 30px 0px 20px 45px; /* TRBL */
+        gap: 8px;
+        flex-shrink: 0;
+        margin: 0;
+    }
+
+    .header_wrapper h2 {
+        font-size: 1.5rem;
+    }
+
+    .header_wrapper h3 {
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+    }
+
+    .header_wrapper > .file_heading {
+        margin: -7px;
+    }
+
+    .header_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* current object icon */
+    .header_container > .currentObjectIcon {
+        display: block !important;
+        width: 10rem; /* set with and height of subject icon */
+        height: 9rem;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .header_wrapper > .stamp_logo {
+        display: none;
+    }
+
+    /* image */
+    .scpImage {
+        max-height: 100svh;
+        object-position: center 15%;;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        border-left-width: 4px;
+        padding-left: 16px;
+        margin-left: 16px;
+    }
+
+    p {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        margin: 0px 16px 32px 16px;
     }
     
 }
 
-@media screen and (min-width: 968px) {
 
-    .glass_morph > .desc{
-    margin-right: 4rem; 
-}
 
-    .header_wrapper {
-        margin-left: 4rem;
-    }
 
-    .currentObjectIcon {
-        margin-left: 8rem;
-        width: 15vw;
-        height: auto;
-    }
 
-    .image_container{
-        width: 60%;
-        height: 100%;
-        overflow: hidden;
-        margin: auto;
-    }
 
-    .image_container > .scpImage {
-        position: relative;
-        top: 10px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        margin-top: 20px;
-        clip-path: polygon(
-        100% 0%,      /* Start: Absolute top-right */
-        70% 0%,       /* Move left along top edge (mirrored 60%) */
-        73% 10px,     /* Dip down/right to create slope (mirrored 55%) */
-        100% 10px,    /* Go back to right edge */
-        100% 100%,    /* Drop straight to bottom-right corner */
-        70% 100%,              /* Move left along bottom edge (mirrored 30%) */
-        65% calc(100% - 10px), /* Dip up/right to create slope (mirrored 35%) */
-        0% calc(100% - 10px),  /* Go to far left edge */
-        0% 0%         /* Go up to top-left corner to close the shape */
-        );
-    }
-
-    .contain {
-        margin-left: 60px;
-        margin-right: 60px;
-    }
-}
