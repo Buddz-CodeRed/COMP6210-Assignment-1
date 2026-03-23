@@ -1,4 +1,4 @@
-import {HasherRouter as Router, Route, Routes} from 'react-router'
+import {HashRouter as Router, Route, Routes} from 'react-router'
 import Nav from './components/Nav'
 import Scp_Details from './components/Scp_Details'
 import Home from './components/Home'
