@@ -1,4 +1,4 @@
-import { scp_items } from './Data'
+import { scp_items } from '../service/Data'
 import { useParams } from 'react-router';
 
 export default function Scp_Details()
@@ -18,7 +18,7 @@ export default function Scp_Details()
                     <h2 className='file_heading'>SCP Foundation</h2>
 
                     <div className="stamp_logo">
-                        <img src="/images/stamp-Photoroom.png" alt="Scp Logo" className='logo'/>
+                        <img src="/src/assets/images/stamp-Photoroom.png" alt="Scp Logo" className='logo'/>
                     </div>
 
                     <div className="header_items">

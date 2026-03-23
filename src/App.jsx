@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router'
-import Nav from './Nav'
-import Scp_Details from './Scp_Details'
-import Home from './Home'
+import Nav from './components/Nav'
+import Scp_Details from './components/Scp_Details'
+import Home from './components/Home'
 
 export default function App()
 {

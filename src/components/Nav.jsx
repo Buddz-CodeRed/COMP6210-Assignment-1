@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import { scp_items } from './Data'
+import { scp_items } from '../service/Data'
 
 export const SCPIconList = ({itemClass, iconClass = "navIcon"}) => {
     return (
@@ -22,10 +22,12 @@ export default function Nav()
             <nav>
                 {/* Create link for Home */}
                 <div className='navItem'>
-                    
-                    <Link to='/Home'>
-                        <img src="/images/home_icon-Photoroom.png" alt="Home Icon" className='navIcon homeIcon'></img>
-                    </Link>
+                    <div className="hover_container">
+                        <Link to='/Home'>
+                            <img src="/src/assets/images/home_icon-Photoroom.png" alt="Home Icon" className='navIcon homeIcon'></img>
+                        </Link>
+                        <span className='hover-id'>Home</span>
+                    </div>
                 </div>
                 {   // Use the map method to iterate through the scp_items array with the key 'subject' to render a link for each object
                     scp_items.map(
@@ -34,11 +36,14 @@ export default function Nav()
                             // set a unique key 'subject':string for this element block
                             <div key={objects.subject} className='navItem'>
                                 {/* set each string value of subject as a url link */}
-                                <Link to={`/objects/${objects.subject}`}>
-                                    <img src={objects.icon} alt='icon' className='navIcon'></img>
-                                </Link>
+                                {/* add tooltip when cursor hovers over icon */}
                                 <div className="hover_container">
-                                    <span className="hover-id">{objects.subject}</span>
+                                    <Link to={`/objects/${objects.subject}`}>
+                                        <img src={objects.icon} alt='icon' className='navIcon'></img>
+                                    </Link>
+                                    <div className="hover_container">
+                                        <span className="hover-id">{objects.subject}</span>
+                                    </div>
                                 </div>
                             </div>
                         )
