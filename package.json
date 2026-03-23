@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Buddz-CodeRed.github.io/COMP6210-Assignment-1",
+  "homepage": "https://Buddz-CodeRed.github.io/COMP6210-Assignment-1/",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",

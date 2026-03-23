@@ -8,7 +8,7 @@ export default function App()
   return(
     <div>
       {/* monitors the URL bar for changes to the address */}
-      <Router basename='/COMP6210-Assignment-1/'>
+      <Router basename={import.meta.env.BASE_URL}>
         {/* call the Nav component */}
         <Nav/>
         {/* render the current URL and displays the component */}
