@@ -8,7 +8,7 @@ export default function App()
   return(
     <div>
       {/* monitors the URL bar for changes to the address */}
-      <Router basename='/https://github.com/Buddz-CodeRed/COMP6210-Assignment-1/'>
+      <Router basename='/COMP6210-Assignment-1/'>
         {/* call the Nav component */}
         <Nav/>
         {/* render the current URL and displays the component */}
