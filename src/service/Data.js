@@ -8,7 +8,7 @@ export const scp_items = [
             "procedure_2": "Teams including a minimum of two (2) members are required within 20 meters of SCP-002 or its containment area. Personnel should maintain physical contact with one another at all times to confirm there is another person present, as perception may be dulled, skewed, or influenced by proximity to the object.",
             "procedure_3": "No personnel below Level 3 are permitted within SCP-002. This requirement may be waived via written authorization from two (2) off-site Level 4 administrators. Command staff issued such a waiver must be escorted by at least five (5) Level 3 Security personnel for the duration of their contact and must temporarily surrender their rank and security clearance. Following contact, command staff will be escorted at least 5 km from SCP-002 to undergo a seventy-two (72)-hour quarantine and psychological evaluation. If deemed fit for return to duty by psych staff, rank and security clearance may be restored when quarantine expires."
         },
-        "image": "../src/assets/images/800px-SCP002.jpg",
+        "image": "../assets/images/800px-SCP002.jpg",
         "icon": "../src/assets/images/scp-002_icon-Photoroom.png"
     },
     {
