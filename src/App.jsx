@@ -1,4 +1,4 @@
-import {HashRouter as Router, Route, Routes} from 'react-router'
+import {HashRouter as Router, Route, Routes} from 'react-router-dom'
 import Nav from './components/Nav'
 import Scp_Details from './components/Scp_Details'
 import Home from './components/Home'
@@ -8,7 +8,7 @@ export default function App()
   return(
     <div>
       {/* monitors the URL bar for changes to the address */}
-      <Router basename={import.meta.env.BASE_URL}>
+      <Router>
         {/* call the Nav component */}
         <Nav/>
         {/* render the current URL and displays the component */}
